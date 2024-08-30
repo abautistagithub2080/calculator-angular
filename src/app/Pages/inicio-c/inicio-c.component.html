@@ -1,0 +1,40 @@
+
+<div class="mat-elevation-z3" style="width: 70%; padding: 30px; margin: 50px auto; display: flex;justify-content: center;">
+    <form [formGroup]="formCalc">
+        <p> Escribe tu operación de la siguiente forma: </p>
+        <p> (45+78-90)*12 </p>
+        <p> 345-9*8-11 </p>
+        <p> Para el obtener el valor del factorial selecciona: FACTORIAL</p>
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Escribe tu operación.</mat-label>
+                <input matInput  formControlName="NumberOne">
+              </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Selecciona una opcion</mat-label>
+                <mat-select formControlName="cbxTipe">
+                    <mat-option value="2">SUMAR,RESTAR,MULTIPLICAR,DIVIDIR</mat-option>
+                    <mat-option value="5">FACTORIAL</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>El Resultado es:</mat-label>
+                <input matInput formControlName="Resul">
+              </mat-form-field>
+        </div>
+
+
+        <div class="flex">
+            <button mat-flat-button color="primary" (click)="CalcularData()">Calcular</button>
+            
+        </div>
+
+    </form>
+
+</div>
